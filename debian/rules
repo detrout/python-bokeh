@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+# export DH_VERBOSE=1
+export PYBUILD_NAME=bokeh
+PYTHON2_VERSIONS = $(shell pyversions -r)
+PYTHON3_VERSIONS= $(shell py3versions -r)
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_auto_install:
+	dh_auto_install
+	# Clean up python2 package
+	mv $(CURDIR)/debian/python-bokeh/usr/bin/bokeh-server \
+           $(CURDIR)/debian/python-bokeh/usr/bin/bokeh2-server
+	mv $(CURDIR)/debian/python-bokeh/usr/bin/websocket_worker.py \
+           $(CURDIR)/debian/python-bokeh/usr/bin/websocket2_worker
+
+	# Clean up python3 package
+	mv $(CURDIR)/debian/python3-bokeh/usr/bin/bokeh-server \
+           $(CURDIR)/debian/python3-bokeh/usr/bin/bokeh3-server
+	mv $(CURDIR)/debian/python3-bokeh/usr/bin/websocket_worker.py \
+           $(CURDIR)/debian/python3-bokeh/usr/bin/websocket3_worker

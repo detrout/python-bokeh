@@ -1,0 +1,9 @@
+bokeh (0.9.0-0) UNRELEASED; urgency=medium
+
+  * Initial release (Closes: 756017)
+  * TODO:
+    - Upstream wants python-tz == 2013b, debian has 2012c
+    - install javascript / css into a common package
+      preferably in /usr/share/
+
+ -- Diane Trout <diane@ghic.org>  Fri, 12 Jun 2015 11:51:20 -0700

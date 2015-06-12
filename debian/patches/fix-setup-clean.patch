@@ -1,0 +1,12 @@
+--- a/setup.py
++++ b/setup.py
+@@ -332,7 +332,8 @@
+ 
+ def clean():
+     print("Removing prior-built items...", end=" ")
+-    dir_util.remove_tree('build/lib/bokeh')
++    if os.path.exists('build'):
++        dir_util.remove_tree('build/lib/bokeh')
+     print("Done")
+ 
+ 
