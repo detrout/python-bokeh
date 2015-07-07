@@ -1,0 +1,8 @@
+To build package:
+
+   git clone https://github.com/detrout/debian-bokeh
+   uscan --force-download --download-current-version
+   tar xavf ../bokeh_$(version).orig.tar.gz --strip=1
+   debuild
+
+ -- Diane Trout <diane@ghic.org>, Fri, 12 Jun 2015 15:37:37 -0700
