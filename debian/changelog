@@ -1,4 +1,4 @@
-bokeh (0.9.1-1) UNRELEASED; urgency=medium
+bokeh (0.9.3-1) UNRELEASED; urgency=medium
 
   * Initial release (Closes: 756017)
   * TODO:
@@ -6,4 +6,4 @@ bokeh (0.9.1-1) UNRELEASED; urgency=medium
     - install javascript / css into a common package
       preferably in /usr/share/
 
- -- Diane Trout <diane@debian.org>  Tue, 07 Jul 2015 16:22:13 -0700
+ -- Diane Trout <diane@debian.org>  Fri, 04 Sep 2015 13:53:46 -0700
