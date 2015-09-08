@@ -6,7 +6,7 @@ PYTHON2_VERSIONS = $(shell pyversions -r)
 PYTHON3_VERSIONS= $(shell py3versions -r)
 
 %:
-	dh $@ --with python2,python3 --buildsystem=pybuild
+	dh $@ --with python2,python3,linktree --buildsystem=pybuild
 
 override_dh_auto_install:
 	dh_auto_install

@@ -3,7 +3,7 @@ Section: python
 Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Diane Trout <diane@debian.org>
-Build-Depends: debhelper (>=9~), dh-python,
+Build-Depends: debhelper (>=9~), dh-python, dh-linktree,
         python-all (>= 2.6.6-3~), python3-all,
         python-abstract-rendering, python3-abstract-rendering,
         python-tornado (>=4.0.1), python3-tornado (>=4.0.1),
