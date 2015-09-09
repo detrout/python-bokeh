@@ -10,8 +10,8 @@ Build-Depends: debhelper (>=9~), dh-python, dh-linktree,
         python-markupsafe (>=0.18), python3-markupsafe (>=0.18),
         python-greenlet (>=0.4.1), python3-greenlet (>=0.4.1),
         python-yaml (>=3.10), python3-yaml (>=3.10),
-        python-zmq (>=14.3.1), python3-zmq (>=14.3.1), 
-Build-Depends-Indep: 
+        python-zmq (>=14.3.1), python3-zmq (>=14.3.1),
+Build-Depends-Indep:
         python-setuptools, python3-setuptools,
         python-flask (>=0.10.1), python3-flask (>=0.10.1),
         python-jinja2 (>=2.7), python3-jinja2 (>=2.7),
@@ -91,4 +91,3 @@ Description: Browser based interactive plotting library web resources
 # create interactive plots, dashboards, and data applications.
 # .
 # This package provides the Python 2 version
-
