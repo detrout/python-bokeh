@@ -1,0 +1,14 @@
+--- a/bokeh/util/paths.py
++++ b/bokeh/util/paths.py
+@@ -8,6 +8,11 @@
+ def serverdir():
+     """ Get the location of the server subpackage
+     """
++    # inserted by Debian. Look for our shared resource directory
++    share = '/usr/share/bokeh'
++    if os.path.exists(share):
++        return share
++
+     path = join(ROOT_DIR, 'server')
+     path = normpath(path)
+     if sys.platform == 'cygwin': path = realpath(path)

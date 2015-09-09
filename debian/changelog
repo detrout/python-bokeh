@@ -3,8 +3,7 @@ bokeh (0.9.3-1) UNRELEASED; urgency=medium
   * Initial release (Closes: 756017)
   * TODO:
     - Upstream wants python-tz == 2013b, debian has 2012c
-    - install javascript / css into a common package
-      preferably in /usr/share/
   * Use dh_linktree to replace bootstrap
+  * Install common resources into a single package.
 
  -- Diane Trout <diane@debian.org>  Fri, 04 Sep 2015 13:53:46 -0700
