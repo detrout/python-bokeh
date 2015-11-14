@@ -11,6 +11,11 @@ Build-Depends: debhelper (>=9~), dh-python, dh-linktree,
         python-greenlet (>=0.4.1), python3-greenlet (>=0.4.1),
         python-yaml (>=3.10), python3-yaml (>=3.10),
         python-zmq (>=14.3.1), python3-zmq (>=14.3.1),
+# docs
+	graphviz,
+	python-sphinx,
+	python-sphinx-bootstrap-theme,
+	python-sphinxcontrib.httpdomain,
 Build-Depends-Indep:
         python-setuptools, python3-setuptools,
         python-flask (>=0.10.1), python3-flask (>=0.10.1),
