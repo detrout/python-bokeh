@@ -1,4 +1,4 @@
-bokeh (0.10.0-1) UNRELEASED; urgency=medium
+bokeh (0.11.1-1) UNRELEASED; urgency=medium
 
   * Initial release (Closes: 756017)
   * TODO:
@@ -6,4 +6,4 @@ bokeh (0.10.0-1) UNRELEASED; urgency=medium
   * Use dh_linktree to replace bootstrap
   * Install common resources into a single package.
 
- -- Diane Trout <diane@ghic.org>  Wed, 11 Nov 2015 14:47:37 -0800
+ -- Diane Trout <diane@ghic.org>  Mon, 22 Feb 2016 16:04:54 -0800
