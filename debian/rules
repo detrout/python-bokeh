@@ -21,17 +21,17 @@ override_dh_auto_install:
 	   $(CURDIR)/debian/python-bokeh-common/usr/share/bokeh/
 	# we should remove upstream min.js. but should we build our own?
 	# should debian libjs-boostrap build it?
-	rm $(CURDIR)/debian/python-bokeh-common/usr/share/bokeh/static/bootstrap/js/bootstrap.min.js
+	# rm $(CURDIR)/debian/python-bokeh-common/usr/share/bokeh/static/bootstrap/js/bootstrap.min.js
 
 	# Clean up python2 package
 	mv $(CURDIR)/debian/python-bokeh/usr/bin/bokeh-server \
            $(CURDIR)/debian/python-bokeh/usr/bin/bokeh2-server
-	mv $(CURDIR)/debian/python-bokeh/usr/bin/websocket_worker.py \
-           $(CURDIR)/debian/python-bokeh/usr/bin/websocket2_worker
+	#mv $(CURDIR)/debian/python-bokeh/usr/bin/websocket_worker.py \
+        #   $(CURDIR)/debian/python-bokeh/usr/bin/websocket2_worker
 	rm -rf $(CURDIR)/debian/python-bokeh/usr/lib/python2*/dist-packages/bokeh/server/static
 
 	# Clean up python3 package
 	mv $(CURDIR)/debian/python3-bokeh/usr/bin/bokeh-server \
            $(CURDIR)/debian/python3-bokeh/usr/bin/bokeh3-server
-	mv $(CURDIR)/debian/python3-bokeh/usr/bin/websocket_worker.py \
-           $(CURDIR)/debian/python3-bokeh/usr/bin/websocket3_worker
+	#mv $(CURDIR)/debian/python3-bokeh/usr/bin/websocket_worker.py \
+        #   $(CURDIR)/debian/python3-bokeh/usr/bin/websocket3_worker
