@@ -5,21 +5,11 @@ Maintainer: Diane Trout <diane@ghic.org>
 Build-Depends: debhelper (>=9~),
                dh-linktree,
                dh-python,
-#               python-all,
-#               python-numpy (>=1.7.1),
-#               python-tornado (>=4.3),
-#               python-yaml (>=3.10),
                python3-all,
                python3-tornado (>=4.3),
                python3-yaml (>=3.10)
 Build-Depends-Indep: libjs-bootstrap,
                      libjs-jquery,
-#                     python-concurrent.futures,
-#                     python-dateutil (>=2.1),
-#                     python-jinja2 (>=2.7),
-#                     python-requests (>=1.2.3),
-#                     python-setuptools,
-#                     python-six (>=1.5.2),
                      python3-dateutil (>=2.1),
                      python3-jinja2 (>=2.7),
                      python3-requests (>=1.2.3),
@@ -32,20 +22,6 @@ Vcs-Git: https://github.com/detrout/python-bokeh
 Vcs-Browser: https://github.com/detrout/python-bokeh
 Standards-Version: 3.9.8
 Testsuite: autopkgtest
-
-#Package: python-bokeh
-#Architecture: all
-#Depends: ${misc:Depends}, ${python:Depends}
-#Enhances: ipython-notebook
-#Provides: ${python:Provides}
-#Description: Browser based interactive plotting library for Python 2.
-# Bokeh's goal is to provide elegant, concise construction of novel graphics
-# in the style of D3.js, but also deliver this capability with
-# high-performance interactivity over very large or streaming
-# datasets. Bokeh can help anyone who would like to quickly and easily
-# create interactive plots, dashboards, and data applications.
-# .
-# This package provides the Python 2 version
 
 Package: python3-bokeh
 Architecture: all
