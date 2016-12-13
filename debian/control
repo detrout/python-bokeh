@@ -47,17 +47,3 @@ Description: Browser based interactive plotting library web resources
  create interactive plots, dashboards, and data applications.
  .
  This package provides the stylesheets and javascript for Bokeh.
-
-#Package: python-bokeh-doc
-#Architecture: all
-#Section: doc
-#Depends: ${misc:Depends}, ${sphinxdoc:Depends}
-#Suggests: ${misc:Suggests}, ${sphinxdoc:Suggests}
-#Description: Browser based interactive plotting library for Python 2.
-# Bokeh's goal is to provide elegant, concise construction of novel graphics
-# in the style of D3.js, but also deliver this capability with
-# high-performance interactivity over very large or streaming
-# datasets. Bokeh can help anyone who would like to quickly and easily
-# create interactive plots, dashboards, and data applications.
-# .
-# This package provides the Python 2 version
