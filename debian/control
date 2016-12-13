@@ -1,75 +1,55 @@
 Source: bokeh
 Section: python
 Priority: optional
-Build-Depends: debhelper (>=9~), dh-python, dh-linktree,
-        python-all (>= 2.6.6-3~), python3-all,
-        python-abstract-rendering, python3-abstract-rendering,
-        python-tornado (>=4.0.1), python3-tornado (>=4.0.1),
-        python-markupsafe (>=0.18), python3-markupsafe (>=0.18),
-        python-greenlet (>=0.4.1), python3-greenlet (>=0.4.1),
-        python-yaml (>=3.10), python3-yaml (>=3.10),
-        python-zmq (>=14.3.1), python3-zmq (>=14.3.1),
-# docs
-	graphviz,
-	python-sphinx,
-	python-sphinx-bootstrap-theme,
-	python-sphinxcontrib.httpdomain,
-# tests
-	python-pandas, python3-pandas,
-	python-matplotlib, python3-matplotlib,
-	python-scipy, python3-scipy,
-	python-bs4, python3-bs4,
-        python-selenium, python3-selenium,
-	ipython, ipython3,
-Build-Depends-Indep:
-        libjs-bootstrap,
-        libjs-jquery,
-        python-setuptools, python3-setuptools,
-        python-flask (>=0.10.1), python3-flask (>=0.10.1),
-        python-jinja2 (>=2.7), python3-jinja2 (>=2.7),
-        python-werkzeug (>=0.9.1), python3-werkzeug (>=0.9.1),
-        python-itsdangerous (>=0.21), python3-itsdangerous (>=0.21),
-        python-dateutil (>=2.1), python3-dateutil (>=2.1),
-        python-tz (>= 2012c), python3-tz (>= 2012c),
-        python-requests (>=1.2.3), python3-requests (>=1.2.3),
-        python-six (>=1.5.2), python3-six (>=1.5.2),
-        python-pygments (>=1.6), python3-pygments (>=1.6),
-        python-pystache (>=0.5.3), python3-pystache (>=0.5.3),
-        python-markdown (>=2.3.1), python3-markdown (>=2.3.1),
-        python-colorama (>=0.2.7), python3-colorama (>=0.2.7),
-        python-websocket, python3-websocket,
-# tests
-	python-pytest, python3-pytest,
-	python-pytest-cov, python3-pytest-cov,
-        python-mock (>=1.0.1), python3-mock (>=1.0.1),
-# cli
-# 'click (>=3.3),
 Maintainer: Diane Trout <diane@ghic.org>
+Build-Depends: debhelper (>=9~),
+               dh-linktree,
+               dh-python,
+#               python-all,
+#               python-numpy (>=1.7.1),
+#               python-tornado (>=4.3),
+#               python-yaml (>=3.10),
+               python3-all,
+               python3-tornado (>=4.3),
+               python3-yaml (>=3.10)
+Build-Depends-Indep: libjs-bootstrap,
+                     libjs-jquery,
+#                     python-concurrent.futures,
+#                     python-dateutil (>=2.1),
+#                     python-jinja2 (>=2.7),
+#                     python-requests (>=1.2.3),
+#                     python-setuptools,
+#                     python-six (>=1.5.2),
+                     python3-dateutil (>=2.1),
+                     python3-jinja2 (>=2.7),
+                     python3-requests (>=1.2.3),
+                     python3-setuptools,
+                     python3-six (>=1.5.2)
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.3
 Homepage: http://bokeh.pydata.org/
-# XS-Testsuite: autopkgtest
 Vcs-Git: https://github.com/detrout/python-bokeh
 Vcs-Browser: https://github.com/detrout/python-bokeh
 Standards-Version: 3.9.8
+Testsuite: autopkgtest
 
-Package: python-bokeh
-Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}
-Enhances: ipython-notebook
-Provides: ${python:Provides}
-Description: Browser based interactive plotting library for Python 2.
- Bokeh's goal is to provide elegant, concise construction of novel graphics
- in the style of D3.js, but also deliver this capability with
- high-performance interactivity over very large or streaming
- datasets. Bokeh can help anyone who would like to quickly and easily
- create interactive plots, dashboards, and data applications.
- .
- This package provides the Python 2 version
+#Package: python-bokeh
+#Architecture: all
+#Depends: ${misc:Depends}, ${python:Depends}
+#Enhances: ipython-notebook
+#Provides: ${python:Provides}
+#Description: Browser based interactive plotting library for Python 2.
+# Bokeh's goal is to provide elegant, concise construction of novel graphics
+# in the style of D3.js, but also deliver this capability with
+# high-performance interactivity over very large or streaming
+# datasets. Bokeh can help anyone who would like to quickly and easily
+# create interactive plots, dashboards, and data applications.
+# .
+# This package provides the Python 2 version
 
 Package: python3-bokeh
 Architecture: all
-Depends: ${python3:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${python3:Depends}
 Enhances: ipython-notebook
 Description: Browser based interactive plotting library for Python 3.
  Bokeh's goal is to provide elegant, concise construction of novel graphics
