@@ -48,10 +48,10 @@ Maintainer: Diane Trout <diane@ghic.org>
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.3
 Homepage: http://bokeh.pydata.org/
-Standards-Version: 3.9.6
 # XS-Testsuite: autopkgtest
 Vcs-Git: https://github.com/detrout/python-bokeh
 Vcs-Browser: https://github.com/detrout/python-bokeh
+Standards-Version: 3.9.8
 
 Package: python-bokeh
 Architecture: all
