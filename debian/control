@@ -21,7 +21,6 @@ Homepage: http://bokeh.pydata.org/
 Vcs-Git: https://github.com/detrout/python-bokeh
 Vcs-Browser: https://github.com/detrout/python-bokeh
 Standards-Version: 3.9.8
-Testsuite: autopkgtest
 
 Package: python3-bokeh
 Architecture: all
