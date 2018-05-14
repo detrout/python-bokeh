@@ -15,8 +15,8 @@ Build-Depends-Indep: libjs-bootstrap,
                      python3-requests (>=1.2.3),
                      python3-setuptools,
                      python3-six (>=1.5.2)
-X-Python-Version: >= 2.6
-X-Python3-Version: >= 3.3
+X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.5
 Homepage: http://bokeh.pydata.org/
 Vcs-Git: https://github.com/detrout/python-bokeh
 Vcs-Browser: https://github.com/detrout/python-bokeh
