@@ -13,3 +13,11 @@
      path = join(ROOT_DIR, 'server')
      path = normpath(path)
      if sys.platform == 'cygwin': path = realpath(path)
+--- a/bokeh/command/subcommands/tests/test_info.py
++++ b/bokeh/command/subcommands/tests/test_info.py
+@@ -44,4 +44,4 @@
+     main(["bokeh", "info", "--static"])
+     out, err = capsys.readouterr()
+     assert err == ""
+-    assert out.endswith(join('bokeh', 'server', 'static') + '\n')
++    assert out.endswith(join('bokeh', 'static') + '\n')
