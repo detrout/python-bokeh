@@ -1,0 +1,14 @@
+Author: Diane Trout <diane@ghic.org>
+Subject: Upstream assumes pytest won't have the -3 suffix.
+
+--- a/bokeh/io/tests/test_util.py
++++ b/bokeh/io/tests/test_util.py
+@@ -63,7 +63,7 @@
+ #-----------------------------------------------------------------------------
+ 
+ def test_detect_current_filename():
+-    assert biu.detect_current_filename().endswith(("py.test", "pytest"))
++    assert biu.detect_current_filename().endswith(("py.test", "pytest", "py.test-3"))
+ 
+ @patch('bokeh.io.util.NamedTemporaryFile')
+ def test_temp_filename(mock_tmp):

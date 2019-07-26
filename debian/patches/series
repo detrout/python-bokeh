@@ -1,1 +1,2 @@
+add-debian-pytest.patch
 use-shared-static.patch
