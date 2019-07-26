@@ -9,23 +9,44 @@
 # python-pandas,
 # python-mock,
 
-# TestNotebookHandler: needs jupyter notebook
 # test_py_callback; needs flexx installed
-# test_get_crawl_dict: beats me why this one is failing
-# test_run_static: will this work if static is in the expected packe?
-Test-Command: set -e ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py $(which py.test-3) -k"not (TestNotebookHandler or test_py_callback or test_get_crawl_dict)" --pyargs bokeh ; done
-Depends: nodejs,
+# -k"not (TestNotebookHandler or test_py_callback or test_get_crawl_dict)"
+Test-Command: set -e
+ ; export LC_ALL=C.UTF-8
+ ; export LANG=C.UTF-8
+ ; export HOME=/tmp/home
+ ; export XDG_RUNTIME_DIR=/tmp/home
+ ; if [ \! -e /tmp/home ]
+ ;     then mkdir /tmp/home
+ ;     python3 -c 'import bokeh ; bokeh.sampledata.download()'
+ ; fi
+ ; for py in $(py3versions -r 2>/dev/null)
+ ;     do cd "$AUTOPKGTEST_TMP"
+ ;     echo "Testing with $py:"
+ ;     xvfb-run $py $(which py.test-3) -m 'not selenium' -k 'not (test_py_callback or test_license)'  --pyargs bokeh 
+ ; done
+Depends: @,
+ jupyter-notebook,
+ nodejs,
+ npm,
+ phantomjs,
  python3-all,
  python3-bs4,
- python3-bokeh,
+ python3-icalendar,
  python3-ipython,
  python3-jinja2,
+ python3-lxml,
  python3-matplotlib,
  python3-mock,
+ python3-networkx,
  python3-nbformat,
  python3-numpy,
  python3-pandas,
+ python3-pil,
  python3-pytest,
  python3-requests,
+ python3-selenium,
  python3-tornado,
  python3-yaml,
+ xauth,
+ xvfb,
