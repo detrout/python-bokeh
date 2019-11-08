@@ -1,3 +1,4 @@
 assume-installed-version.patch
 add-debian-pytest.patch
 use-shared-static.patch
+use-debian-version.patch

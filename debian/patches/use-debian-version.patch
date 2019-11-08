@@ -1,0 +1,18 @@
+Description: Use the Debian package version instead of letting
+ versioneer guess. This should aid with reproduciblity.
+Forwarded: No
+--- a/versioneer.py
++++ b/versioneer.py
+@@ -1398,6 +1398,12 @@
+ 
+     Returns dict with two keys: 'version' and 'full'.
+     """
++    import subprocess
++    debian_version = subprocess.check_output(('dpkg-parsechangelog', '-SVersion'))
++    return {
++        'full-revisionid': debian_version.split(b'-', 1)[0].decode('ascii'),
++        'version': debian_version.split(b'-', 1)[0].decode('ascii'),
++    }
+     if "versioneer" in sys.modules:
+         # see the discussion in cmdclass.py:get_cmdclass()
+         del sys.modules["versioneer"]
