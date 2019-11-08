@@ -2,7 +2,7 @@ Source: bokeh
 Section: python
 Priority: optional
 Maintainer: Diane Trout <diane@ghic.org>
-Build-Depends: debhelper (>=9~),
+Build-Depends: debhelper (>=12~),
                dh-linktree,
                dh-python,
                python3-all,
