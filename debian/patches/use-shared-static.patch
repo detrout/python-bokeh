@@ -1,6 +1,6 @@
 --- a/bokeh/util/paths.py
 +++ b/bokeh/util/paths.py
-@@ -8,6 +8,12 @@
+@@ -44,6 +44,12 @@
  def serverdir():
      """ Get the location of the server subpackage
      """
@@ -15,9 +15,12 @@
      if sys.platform == 'cygwin': path = realpath(path)
 --- a/bokeh/command/subcommands/tests/test_info.py
 +++ b/bokeh/command/subcommands/tests/test_info.py
-@@ -44,4 +44,4 @@
+@@ -79,7 +79,7 @@
      main(["bokeh", "info", "--static"])
      out, err = capsys.readouterr()
      assert err == ""
 -    assert out.endswith(join('bokeh', 'server', 'static') + '\n')
 +    assert out.endswith(join('bokeh', 'static') + '\n')
+ 
+ def test__version_missing():
+     assert scinfo._version('bokeh', '__version__') is not None
