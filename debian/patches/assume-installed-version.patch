@@ -1,0 +1,13 @@
+--- a/bokeh/_testing/util/git.py
++++ b/bokeh/_testing/util/git.py
+@@ -45,6 +45,10 @@
+     ''' Get the git-version of a specific ref, e.g. HEAD, origin/master.
+ 
+     '''
++    from bokeh._versio import get_version
++
++    return get_version()['version']
++
+     cmd = ["git", "describe", "--tags", "--always", ref]
+ 
+     try:
